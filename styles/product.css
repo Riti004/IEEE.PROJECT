@@ -1,0 +1,126 @@
+/* General Styles for Product Section */
+.subheading, .heading {
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.subheading {
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.heading {
+    color: #222;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+/* Product Grid */
+.products .box-container-tshirt {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* Product Box */
+.products .box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.products .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons */
+.products .box .fa-heart,
+.products .box .fa-eye {
+    position: absolute;
+    top: 1rem;
+    right: -4rem;
+    background: #eee;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.products .box:hover .fa-heart {
+    right: 1rem;
+}
+
+.products .box:hover .fa-eye {
+    right: 4.5rem;
+}
+
+.products .box .fa-heart:hover,
+.products .box .fa-eye:hover {
+    background: #ff5252;
+    color: white;
+}
+
+/* Product Image */
+.products .box img {
+    height: 200px;
+    margin: 1rem 0;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Product Title */
+.products .box h3 {
+    color: #444;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Rating Stars */
+.products .box .stars i {
+    font-size: 1.4rem;
+    color: gold;
+    margin: 0 2px;
+}
+
+/* Price */
+.products .box span {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 2rem;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/* Button */
+.products .box .btn {
+    display: inline-block;
+    background: #10437a;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background 0.3s;
+    font-size: 1rem;
+}
+
+.products .box .btn:hover {
+    background: #ffdd57;
+    color: #10437a;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .heading { font-size: 2rem; }
+    .products .box-container-tshirt { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+}

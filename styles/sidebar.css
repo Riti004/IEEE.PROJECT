@@ -1,0 +1,29 @@
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 110px;
+    left: -220px;
+    bottom: 0;
+    width: 200px;
+    background: rgba(16, 67, 122, 0.3); /* Slightly more visible */
+    backdrop-filter: blur(1px); /* Reduced blur effect */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    transition: left 0.3s ease-in-out;
+    color: white;
+}
+
+/* Sidebar Active */
+.sidebar.sidebar-active {
+    left: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .sidebar {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+}
