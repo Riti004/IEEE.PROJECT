@@ -14,6 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
             products.style.marginLeft = "0";
         }
     });
+    
+   // Function to smoothly scroll to a section
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+
+
 
     // Show footer only when reaching the bottom
     window.addEventListener("scroll", function () {
@@ -29,40 +40,40 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-document.addEventListener("click", function (event) {
-    if (event.target.classList.contains("like-btn")) {
-        let product = event.target.closest(".product");
-        let productId = product.getAttribute("data-id");
-        let productName = product.querySelector(".product-name").innerText;
+// document.addEventListener("click", function (event) {
+//     if (event.target.classList.contains("like-btn")) {
+//         let product = event.target.closest(".product");
+//         let productId = product.getAttribute("data-id");
+//         let productName = product.querySelector(".product-name").innerText;
         
-        let likedItems = JSON.parse(localStorage.getItem("likedItems")) || [];
-        let itemIndex = likedItems.findIndex(item => item.id === productId);
+//         let likedItems = JSON.parse(localStorage.getItem("likedItems")) || [];
+//         let itemIndex = likedItems.findIndex(item => item.id === productId);
         
-        if (itemIndex === -1) {
-            likedItems.push({ id: productId, name: productName });
-            event.target.classList.add("liked");
-        } else {
-            likedItems.splice(itemIndex, 1);
-            event.target.classList.remove("liked");
-        }
+//         if (itemIndex === -1) {
+//             likedItems.push({ id: productId, name: productName });
+//             event.target.classList.add("liked");
+//         } else {
+//             likedItems.splice(itemIndex, 1);
+//             event.target.classList.remove("liked");
+//         }
         
-        localStorage.setItem("likedItems", JSON.stringify(likedItems));
-        updateLikedList();
-    }
-     // Update Liked Items in Sidebar
-     function updateLikedList() {
-        let likedItems = JSON.parse(localStorage.getItem("likedItems")) || [];
-        likedList.innerHTML = "";
-        likedItems.forEach(item => {
-            let li = document.createElement("li");
-            li.innerText = item.name;
-            likedList.appendChild(li);
-        });
-    }
+//         localStorage.setItem("likedItems", JSON.stringify(likedItems));
+//         updateLikedList();
+//     }
+//      // Update Liked Items in Sidebar
+//     //  function updateLikedList() {
+//     //     let likedItems = JSON.parse(localStorage.getItem("likedItems")) || [];
+//     //     likedList.innerHTML = "";
+//     //     likedItems.forEach(item => {
+//     //         let li = document.createElement("li");
+//     //         li.innerText = item.name;
+//     //         likedList.appendChild(li);
+//     //     });
+//     // }
     
-    // Load Liked Items on Page Load
-    updateLikedList();
-});
+//     // Load Liked Items on Page Load
+//     //updateLikedList();
+//});
 document.addEventListener("DOMContentLoaded", function () {
     const dropdown = document.querySelector(".dropdown");
     const dropdownMenu = document.querySelector(".dropdown-menu");
