@@ -143,11 +143,11 @@ nav.header {
     height: 40px;
     background: linear-gradient(135deg, #3771aa, #2472c5);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: fixed;  /* Fix it at the top */
-    top: 70px;        /* Below main header */
+    position: fixed;  
+    top: 70px;        
     left: 0;
     right: 0;
-    z-index: 999;     /* Ensure it's above other content */
+    z-index: 999;    
 }
 
 
@@ -178,9 +178,5 @@ nav.header {
     .section-right i {
         flex: 1;
     }
-    .sidebar {
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
+   
 }
