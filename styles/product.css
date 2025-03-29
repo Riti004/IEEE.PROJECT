@@ -160,5 +160,13 @@
 
 @media (max-width: 600px) {
     .heading { font-size: 2rem; }
-    .products .box-container-tshirt { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .products .box-container-tshirt,
+    .box-container-cap,
+    .box-container-sticker {
+         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    }
+    
+    
+
+    
 }

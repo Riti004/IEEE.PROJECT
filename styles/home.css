@@ -66,14 +66,13 @@ section {
     border-radius: 10px;
 }
 
-@media(max-width:600px){
-    html{
-        font-size: 55%;
+@media (max-width: 600px) {
+    body {
+        padding-left: 10px;
+        padding-top: 70px;
     }
-    header{
-        padding: 1rem 2rem;
-    }
-    section{
-        padding: 2rem;
+    .image img {
+        max-width: 300px;
+        border-radius: 10px;
     }
 }
